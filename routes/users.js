@@ -200,8 +200,8 @@ router.put('/:userId/:muscleGroup/:exercise/:activity', async (req, res) => {
 			{ firebaseId: req.params.userId },
 			{
 				$set: {
-					[`workouts.$[element].exercises.$[second].activity.$[third].amountOfReps`]:
-						req.body.amountOfReps,
+					[`workouts.$[element].exercises.$[second].activities.$[third].date`]:
+						req.body.newDate,
 				},
 			},
 			{
